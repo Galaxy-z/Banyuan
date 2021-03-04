@@ -182,7 +182,7 @@
   |     git branch -d xx     |         删除分支         |
   | git remote add origin x  |        增加远端库        |
   | git remote remove origin |        删除远端库        |
-  |         git pull         | 从远端库更新链接git hub  |
+  |         git pull         |       从远端库更新       |
 
 - 本地库链接远程库
 
