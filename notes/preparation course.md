@@ -151,7 +151,7 @@
 |   cal   |                             日历                             |
 |  date   |                             时间                             |
 | history |                      历史记录 grep 搜索                      |
-|  Clear  |                             清屏                             |
+|  clear  |                             清屏                             |
 
 
 
@@ -437,5 +437,3 @@
   >        !*.dat
   >        !.gitignore
   >
-
-  
