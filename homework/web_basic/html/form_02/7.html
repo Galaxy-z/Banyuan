@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手机品牌调查表</title>
+</head>
+
+<body>
+    <h1>手机品牌调查表</h1>
+    <form action="#">
+        请输入你的姓名：
+        <input type="text" name="name" id="">
+        <p>
+            1、您使用过多少部手机：
+            <select name="phone_count" id="">
+                <option value="1">一部</option>
+                <option value="2">二部</option>
+                <option value="3">三部</option>
+                <option value="4">四部</option>
+                <option value="5+">更多</option>
+            </select>
+        </p>
+        <p>2、如果让您从下列品牌选择，你会选择哪个品牌？</p>
+        <p>
+            <input type="radio" name="band" id="Nokia" value="Nokia" checked>
+            <label for="Nokia">诺基亚</label>
+            <input type="radio" name="band" id="Samsung" value="Samsung">
+            <label for="Samsung">三星</label>
+            <input type="radio" name="band" id="Lenovo" value="Lenovo">
+            <label for="Lenovo">联想</label>
+            <input type="radio" name="band" id="NTC" value="NTC">
+            <label for="NTC">NTC</label>
+            <input type="radio" name="band" id="Motorola" value="Motorola">
+            <label for="Motorola">摩托罗拉</label>
+        </p>
+        <p>3、如果您更换手机，您将关注下列哪些功能是否具备？</p>
+        <p>
+            <input type="checkbox" name="function" id="" value="music">影视音乐
+            <input type="checkbox" name="function" id="" value="wifi">无线上网
+            <input type="checkbox" name="function" id="" value="game">游戏娱乐
+            <input type="checkbox" name="function" id="" value="gps">卫星导航
+        </p>
+        <p>
+            <input type="checkbox" name="function" id="" value="camera">摄像功能
+            <input type="checkbox" name="function" id="" value="storage">信息存储容量
+            <input type="checkbox" name="function" id="" value="appearance">机型外观
+            <input type="checkbox" name="function" id="" value="endurance">待机时间
+        </p>
+        <p>4、请您描述一下在您心目中一部理想手机是哪种类型？</p>
+        <p>
+            <textarea name="ideal-phone" id="" cols="45" rows="5"></textarea>
+        </p>
+        <input type="submit" name="submit" id="">
+        <input type="reset" value="重置">
+    </form>
+
+</body>
+
+</html>

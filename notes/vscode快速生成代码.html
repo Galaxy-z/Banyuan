@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- .box -->
+    <div class="box"></div>
+    <!-- p#text -->
+    <p id="text"></p>
+    <!-- .box#text -->
+    <div class="box" id="text"></div>
+    <!-- p{你好} -->
+    <p>你好</p>
+    <!-- a[href=#] -->
+    <a href="#"></a>
+    <!-- ul>.class -->
+    <ul>
+        <li class="class"></li>
+    </ul>
+    <!-- table>.row>.cow -->
+    <table>
+        <tr class="row">
+            <td class="col"></td>
+        </tr>
+    </table>
+
+    <!-- div+p -->
+    <div></div>
+    <p></p>
+    <!-- ul>li*3>a -->
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+
+    <!-- (.foo>h1)+(.bar>h2) -->
+    <div class="foo">
+        <h1></h1>
+    </div>
+    <div class="bar">
+        <h2></h2>
+    </div>
+    
+    <!-- ul>li.item$*3 -->
+    <ul>
+        <li class="item1"></li>
+        <li class="item2"></li>
+        <li class="item3"></li>
+    </ul>
+    <!-- div.class>div.class1_$*5 -->
+    <div class="class">
+        <div class="class1_1"></div>
+        <div class="class1_2"></div>
+        <div class="class1_3"></div>
+        <div class="class1_4"></div>
+        <div class="class1_5"></div>
+    </div>
+    <!-- div.class>div.class1_$@3*4 -->
+    <div class="class">
+        <div class="class1_3">
+        </div>
+        <div class="class1_4"></div>
+        <div class="class1_5"></div>
+        <div class="class1_6"></div>
+    </div>
+</body>
+</html>

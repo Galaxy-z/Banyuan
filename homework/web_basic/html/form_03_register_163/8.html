@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册网易邮箱</title>
+</head>
+
+<body>
+    <img src="images/logo.gif" alt=""><br>
+    <img src="images/top.gif" alt=""><br>
+    <img src="images/step1.gif" alt=""><br>
+    <form action="#">
+        <table width="100%">
+            <tr>
+                <td width="42%">用户名：</td>
+                <td align="left">
+                    <input type="text" name="username" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td align="left">
+                    <input type="password" name="password" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>再次输入密码：</td>
+                <td align="left">
+                    <input type="password" name="password_confirm" id="">
+                </td>
+            </tr>
+        </table>
+
+        <img src="images/step2.gif" alt="">
+        <table width="100%">
+            <tr>
+                <td width="42%">密码保护问题：</td>
+                <td align="left">
+                    <select name="protect_question" id="">
+                        <option value="">请选择密码提示问题</option>
+                        <option value="my_teacher">我的中学老师是谁？</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>密码保护问题答案：</td>
+                <td align="left">
+                    <input type="text" name="protect_question_answer" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td align="left">
+                    <input type="radio" name="gender" value="male" id="male" checked>
+                    <label for="male">男</label>
+                    <input type="radio" name="gender" value="female" id="female">
+                    <label for="female">女</label>
+                </td>
+            </tr>
+        </table>
+
+        <img src="images/step3.gif" alt="">
+        <table width="100%">
+            <tr>
+                <td width="42%"></td>
+                <td>
+                    <input type="checkbox" name="agree" id="">我已阅读并接受“服务条款”
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value=""
+                        style="background: url(images/button.gif) no-repeat; width: 115px; height: 40px;; border: none;">
+
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
