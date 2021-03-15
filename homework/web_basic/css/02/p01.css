@@ -34,7 +34,7 @@ input {
 }
 
 /* 将所有 带有 'hello'的class 设置一个白色背景 */
-.class {
+.hello {
     background-color: #fff;
 }
 
