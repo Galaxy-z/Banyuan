@@ -1,0 +1,64 @@
+/*
+根据以下指示设置对应的样式表，不要修改html文件
+ */
+
+/* 将 <body> 元素设置背景色 #bdc3c7*/
+body {
+    background-color: #bdc3c7;
+}
+
+/* 设置所有的 <h1> 文字颜色 #9b59b6 */
+h1 {
+    color: #9b59b6;
+}
+
+/* 设置所有的 <h2> 元素文字颜色为 orange */
+h2 {
+    color: orange;
+}
+
+
+/* 设置所有的 <li> 元素文字颜色为 blue */
+li {
+    color: blue;
+}
+
+/* 设置所有的 <p> 元素背景颜色为 yellow */
+p {
+    background-color: yellow;
+}
+
+/* 将所有 <input> 元素 设置 3px 的红色边框 */
+input {
+    border: 3px solid red;
+}
+
+/* 将所有 带有 'hello'的class 设置一个白色背景 */
+.class {
+    background-color: #fff;
+}
+
+/* 将id为 'special' 的元素设置一个2px solid blue 边框*/
+#special {
+    border: 2px solid blue;
+}
+
+/* 将所有 <div> 元素包裹下的 <p> 元素 字体调整为 25px */
+div p {
+    font-size: 25px;
+}
+
+/* 所有的input框 左内边距 20px （padding-left） */
+input {
+    padding-left: 20px;
+}
+
+/* 给所有 type="text" 属性的input 元素 一个 gray 的背景 */
+input[type="text"] {
+    background-color: gray;
+}
+
+/* 当鼠标悬停到 <h1> 元素时，将文字颜色调整为 blue */
+h1:hover {
+    color: blue;
+}
