@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border: 1px solid;
+            margin: auto;
+            width: 500px;
+        }
+
+        td,
+        th {
+            text-align: center;
+            border: 1px solid;
+        }
+
+        div {
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="name" placeholder="请输入姓名">
+        <input type="text" id="age" placeholder="请输入年龄">
+        <input type="text" id="gender" placeholder="请输入性别">
+        <input type="button" value="添加" id="add">
+    </div>
+
+    <table id="tb">
+        <caption>学生信息表</caption>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+
+        <tr>
+            <td>张三</td>
+            <td>23</td>
+            <td>男</td>
+            <td><a href="JavaScript:void(0);" onclick="drop(this)">删除</a></td>
+        </tr>
+
+        <tr>
+            <td>李四</td>
+            <td>24</td>
+            <td>男</td>
+            <td><a href="JavaScript:void(0);" onclick="drop(this)">删除</a></td>
+        </tr>
+
+    </table>
+
+</body>
+
+<script>
+    document.getElementById("add").onclick = function(){
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let gender = document.getElementById("gender").value;
+        let del = document.createElement("a");
+        del.setAttribute("href", "JavaScript:void(0);");
+        del.setAttribute("onclick", "drop(this)");
+        del.innerText = "删除";
+
+
+        let tb = document.getElementById("tb");
+
+        let tdName = document.createElement("td");
+        let tdAge = document.createElement("td");
+        let tdGender = document.createElement("td");
+        let tdDel = document.createElement("td");
+        tdName.innerText = name;
+        tdAge.innerText = age;
+        tdGender.innerText = gender;
+        tdDel.appendChild(del);
+
+
+        let tr = document.createElement("tr");
+        tr.appendChild(tdName);
+        tr.appendChild(tdAge);
+        tr.appendChild(tdGender);
+        tr.appendChild(tdDel);
+        
+        
+
+        tb.appendChild(tr);
+    }
+
+    function drop(a){
+        a.parentElement.parentElement.parentElement.removeChild(a.parentElement.parentElement);
+    }
+
+</script>
+
+</html>

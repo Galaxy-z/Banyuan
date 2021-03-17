@@ -1,0 +1,73 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>试题管理系统</title>
+
+	<style type="text/css">
+		#list li input {
+			height: 15px;
+			width: 250px;
+		}
+
+		#list li input.ansInput {
+			height: 15px;
+			width: 160px;
+		}
+
+		#list li.listStyle {
+			list-style-type: upper-alpha;
+		}
+	</style>
+
+</head>
+
+<body>
+	<h2>试题管理系统</h2>
+	<input type="button" value="添加试题" id="addQuestion" />选项个数
+	<input id="option-num" type="text" />
+	<ol id="list">
+		<!-- 将选项添加到此元素内部 -->
+	</ol>
+
+
+</body>
+<script type="text/javascript">
+	/*
+		1. 为button绑定onclick方法
+		2. 方法中，获取input输入框中的选项个数
+		3. 获取 #list 的ol元素 A
+		4. 创建一个li元素 B
+		5. 创建一个input元素 C
+		6. 将元素C放到元素B内部
+		7. 如果选项个数大于0，创建一个ol元素 D
+		8. 循环选项个数这么多次，每次创建一个li元素，创建一个input元素放到这个li元素内部，input元素需要给一个class的属性，属性值位ansInput
+		9. 循环中的每个li元素都要被放置到元素D内部
+		10. ol元素D 放到元素B内部
+	*/
+
+	document.getElementById("addQuestion").onclick = function () {
+		let questionCount = document.getElementById("option-num").value;
+		let ol = document.getElementById("list");
+		let li = document.createElement("li");
+		li.appendChild(document.createElement("input"));
+		ol.appendChild(li);
+		if (questionCount > 0) {
+			let newOl = document.createElement("ol");
+			for (let i = 0; i < questionCount; i++) {
+				let inp = document.createElement("input");
+				inp.setAttribute("class", "ansInput");
+				let newLi = document.createElement("li");
+				newLi.setAttribute("class", "listStyle");
+				newLi.appendChild(inp);
+				newOl.appendChild(newLi);
+			}
+			ol.appendChild(newOl);
+		}
+		document.getElementById("option-num").value = "";
+	}
+</script>
+
+</html>

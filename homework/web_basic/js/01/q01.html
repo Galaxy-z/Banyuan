@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的增删改</title>
+</head>
+
+
+<body>
+    <select id="s">
+        <option>---请选择---</option>
+        <option>北京</option>
+        <option>上海</option>
+        <option>广州</option>
+    </select>
+
+    <br>
+    <input id="add"><button id="add-btn">add</button>
+    <br>
+    <input id="update"><button id="update-btn">update</button>
+    <br>
+    <input id="delete"><button id="delete-btn">delete</button>
+</body>
+<script>
+    /*
+    TODO 
+    1. 添加和修改 包含同名的元素，弹出alert提示已经存在，添加失败
+    2. 增加一个删除的输入框，点击删除按钮，根据删除输入框中的内容，删除一个option，如果option不存在，则alert提示不存在
+    */
+    function isRepeated(value) {
+        let options = document.getElementsByTagName("option");
+        for (let i = 0; i < options.length; i++) {
+            if (value == options[i].innerText) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    document.getElementById("add-btn").onclick = function () {
+        let value = document.getElementById("add").value;
+
+        if (isRepeated(value)) {
+            alert("已存在，添加失败")
+        } else {
+            let optionElement = document.createElement("option");
+            optionElement.innerText = value;
+            document.getElementById("s").appendChild(optionElement);
+        }
+        document.getElementById("add").value = "";
+
+    }
+
+
+    document.getElementById("update-btn").onclick = function () {
+        let value = document.getElementById("update").value;
+
+        if (isRepeated(value)) {
+            alert("已存在，修改失败");
+        } else {
+            let optionElement = document.createElement("option");
+            optionElement.innerText = value;
+            // 拿到旧的 选中的option
+            let selectElement = document.getElementById("s");
+            // 根据select元素可以拿到哪个option被选中
+            let index = selectElement.selectedIndex;
+            // 拿到所有的option
+            let allOption = document.getElementsByTagName("option");
+
+            let old = allOption[index];
+
+            selectElement.replaceChild(optionElement, old);
+        }
+        document.getElementById("update").value = "";
+    }
+
+    document.getElementById("delete-btn").onclick = function () {
+        value = document.getElementById("delete").value;
+
+        // 拿到旧的 选中的option
+        let selectElement = document.getElementById("s");
+        // 拿到所有的option
+        let options = document.getElementsByTagName("option");
+        let hasRemoved = false;
+        for (i = 0; i < options.length; i++) {
+            if (value == options[i].value) {
+                let old = options[i];
+                selectElement.removeChild(old);
+                hasRemoved = true;
+                break;
+            }
+        }
+        if (!hasRemoved) {
+            alert("不存在");
+        }
+        document.getElementById("delete").value = "";
+    }
+</script>
+
+</html>
